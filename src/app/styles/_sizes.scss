@@ -1,0 +1,11 @@
+$sz-container-3x: 1363px;
+$sz-container-2x: 860px;
+$sz-container: 600px;
+
+$space-header: 115px;
+
+@media only screen and (max-width: $sz-container-2x) {
+  .space-header {
+    padding-top: 160px;
+  }
+}

@@ -1,0 +1,8 @@
+@import './sizes';
+@import './colors';
+
+.container {  
+  display: flex;
+  margin: 0 auto;
+  max-width: $sz-container-3x;
+}
