@@ -1,8 +1,33 @@
 @import './sizes';
+@import './typography';
 @import './colors';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 16px "Montserrat",sans-serif;
+}
+
+a {
+  text-decoration-line: none;
+}
 
 .container {  
   display: flex;
   margin: 0 auto;
   max-width: $sz-container-3x;
+}
+
+.primary-color {
+  color: $primary;
+}
+
+.secondary-color {
+  color: $secondary;
+}
+
+.title-color {
+  color: $title-color;
 }

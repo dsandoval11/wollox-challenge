@@ -1,0 +1,101 @@
+@import '../../../styles/colors';
+@import '../../../styles/images';
+@import '../../../styles/sizes';
+
+.collab {
+  display: flex;
+
+  > div {
+    flex: 1 1 0px;
+  }
+}
+
+.twitter-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  max-height: 420px;
+  background-image: $woloxer;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .count-collab {
+    font-size: 2.2em;
+    color: $secondary;
+  }
+  
+  .woloxers {
+    font-size: 2.2em;
+    color: $primary;
+  }
+  
+  .contain-twitter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .user-twitter {
+      color: $white;
+      font-size: 1.3em;
+    }
+
+    .logo-twitter {
+      height: 2.5em;
+      width: 3em;
+      background-image: $twitter-logo;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn-twitter {
+    border: 2px solid $primary;
+    border-radius: 2em;
+    padding: 0.6em 4.3em;
+    color: $white;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .btn-twitter:hover {
+    border: 2px solid $white;
+    background: $primary;
+  }
+}
+
+.info-collab {
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  max-height: 420px;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-collab;
+  font-size: 2.5em;
+}
+
+@media only screen and (max-width: $sz-container-2x) {
+  .collab {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: $sz-container) {
+  .collab {
+    font-size: 10px;
+    flex-direction: column;
+    > div {
+      flex: auto;
+    }
+  }
+  .info-collab {
+    height: 30vh;
+  }
+
+  .twitter-banner {
+    height: 30vh;
+  }
+}

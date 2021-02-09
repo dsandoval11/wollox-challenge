@@ -1,0 +1,87 @@
+@import '../../../styles/images';
+@import '../../../styles/sizes';
+@import '../../../styles/colors';
+
+
+benefits.container {
+  flex-direction: column;
+}
+
+.title-benefits {
+  text-align: center;
+  font-size: 1.7em;
+  width: 100%;
+}
+
+.content-benefits {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-flow: dense;
+  gap: 1em;
+  justify-items: center;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .text-benefit {
+    color: $title-color;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .img-benefit {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 10vh;
+    width: 10vw;
+    max-width: 200px;
+    max-height: 100px;
+    margin-bottom: 1em;
+  }
+  
+  .hour {
+    background-image: $hour;
+  }
+
+  .home-office {
+    background-image: $home-office;
+  }
+
+  .workshop {
+    background-image: $workshop;
+  }
+
+  .drink-snacks {
+    background-image: $drink-snacks;
+  }
+
+  .laptop {
+    background-image: $laptop;
+  }
+
+  .brain {
+    background-image: $brain;
+  }
+}
+
+@media all and (max-width: $sz-container-2x) {
+  benefits.container {
+    font-size: 12px;
+  }
+  .content-benefits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media all and (max-width: $sz-container) {
+  .content-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefit .img-benefit {
+    width: 15vw;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../styles/images";
+@import "../../../styles/sizes";
+@import "../../../styles/colors";
+
+.background-home {
+  position: absolute;
+  margin-top: -8px;
+  width: 100%;
+  height: 616px;
+  background: $bg-header no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+    flex: 1 1 0px;
+  }
+}
+
+.contain-welcome {
+  margin-left: 70px;
+  p {
+    font-size: 2.4em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+  }
+
+  .company {
+    color: $secondary;
+  }
+}
+
+.img-home {
+  text-align: center;
+  img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: $sz-container-2x) {
+  .welcome {
+    flex-direction: column;
+  }
+
+  .contain-welcome {
+    margin-left: 0px;
+    text-align: center;
+
+    p {
+      font-size: 1.4em;
+    }
+  }
+
+  .img-home {
+    text-align: center;
+    max-width: 70%;
+    margin-top: 10px;
+  }
+}

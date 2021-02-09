@@ -1,0 +1,75 @@
+@import '../../../styles/colors';
+@import '../../../styles/sizes';
+@import '../../../styles/images';
+
+requirements > div {
+  display: flex;
+  width: 100%; 
+  align-items: center;
+}
+
+.title-req {
+  flex: 3;
+  text-align: center;
+  color: $title-color;
+}
+
+.contain-req {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 30vh;
+  max-height: 230px;
+  flex: 4;
+  font-size: 1.1em;
+
+  >div {
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+  }
+}
+
+.point {
+  height: 1em;
+  width: 1em;
+  min-width: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0.7em;
+
+  &.green {
+    background-image: $bullet-1;
+  }
+
+  &.black {
+    background-image: $bullet-2;
+  }
+
+  &.blue {
+    background-image: $bullet-3;
+  }
+}
+
+@media all and (max-width: $sz-container-2x) {
+  requirements > div {
+    font-size: 13px;
+  }
+
+  .title-req {
+    flex: 2;
+  }
+
+  .contain-req {
+    flex: 6;
+  }
+}
+
+@media all and (max-width: $sz-container) {
+  requirements > div {
+    flex-direction: column;
+  }
+  .contain-req>div {
+    padding: 0;
+  }
+}

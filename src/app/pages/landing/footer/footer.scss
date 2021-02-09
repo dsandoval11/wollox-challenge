@@ -1,0 +1,68 @@
+@import '../../../styles/images';
+@import '../../../styles/colors';
+@import '../../../styles/sizes';
+
+footerapp.container {
+  text-align: center;
+  flex-direction: column;
+  height: 73vh;
+  max-height: 550px;
+  background-image: $bg-footer;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footerapp > div {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .footer-text-1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .footer-text-2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  .btn-footer {
+    border-radius: 2em;
+    padding: 0.8em 4.3em;
+    background: $primary;
+    color: $white;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .btn-footer:hover {
+    border: 2px solid $primary;
+    color: $primary;
+    background: $white;
+  }
+}
+
+footerapp > span {
+  text-align: center;
+  height: 3em;
+  font-size: 1.3em;
+}
+
+
+@media all and (max-width: $sz-container-2x) {
+  footerapp.container {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: $sz-container) {
+  footerapp.container {
+    height: 60vh;
+    font-size: 11px;
+  }
+}
