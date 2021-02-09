@@ -15,17 +15,17 @@ const components = [
   {
     name: 'signup',
     template: require('../pages/signup/signup.component.html'),
-    controller: ['$scope', SignupController]
+    controller: SignupController
   },
   {
     name: 'listapp',
     template: require('../pages/list/list.component.html'),
-    controller: ['$scope', ListappController]
+    controller: ListappController
   },
   {
     name: 'headerapp',
     template: require('../components/header/header.component.html'),
-    controller: ['$scope', HeaderController],
+    controller: HeaderController,
   },
   {
     name: 'home',

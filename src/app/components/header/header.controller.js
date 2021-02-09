@@ -1,6 +1,6 @@
 import './header.scss';
 
-export default function HomeController($scope) {
+export default ['$scope', function HomeController($scope) {
   angular.element(window).bind('scroll', () => {
     const getCurrentScroll = () => {
       return window.pageYOffset || document.documentElement.scrollTop;
@@ -11,4 +11,4 @@ export default function HomeController($scope) {
       $scope.shrinkHeader = scroll > 50;
     });
   });
-}
+}];
