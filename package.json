@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.8.2",
-    "angular-route": "^1.8.2"
+    "angular-route": "^1.8.2",
+    "ngstorage": "^0.3.11"
   },
   "devDependencies": {
     "css-loader": "^5.0.2",
