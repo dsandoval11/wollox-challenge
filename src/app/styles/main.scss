@@ -20,6 +20,15 @@ a {
   max-width: $sz-container-3x;
 }
 
+input, select {
+  border: none;
+  background: #29a5dd14;
+  border-radius: 5em;
+  text-align: center;
+  height: 2em;
+  text-align-last: center;
+}
+
 .primary-color {
   color: $primary;
 }

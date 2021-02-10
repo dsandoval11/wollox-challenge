@@ -5,6 +5,7 @@ import LandingController from '../pages/landing/landing.controller';
 import SignupController from '../pages/signup/signup.controller';
 import ListappController from '../pages/list/list.controller';
 import HeaderController from '../components/header/header.controller';
+import TechCardController from '../components/techCard/techCard.controller';
 
 const components = [
   {
@@ -51,6 +52,14 @@ const components = [
     name: 'footerapp',
     template: require('../pages/landing/footer/footer.component.html'),
   },
+  {
+    name: 'techcard',
+    template: require('../components/techCard/techCard.component.html'),
+    controller: TechCardController,
+    bindings: {
+      tech: '<'
+    }
+  }
 ];
 
 angular.module('challenge.components', []);

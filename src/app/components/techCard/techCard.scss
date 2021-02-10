@@ -1,0 +1,70 @@
+@import '../../styles/colors';
+@import '../../styles/images';
+
+techcard {
+  > div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #29a5dd47;
+    border-radius: 0.3em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .contain-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 9em;
+    position: relative;
+  }
+
+  >div:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  img {
+    max-height: 150px;
+    object-fit: contain;
+  }
+
+  .contain-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #29a5dd47;
+    background: #29a5dd08;
+    padding: 0em 0.7em 0.7em 0.3em;
+
+    h4, h5 {
+      text-align: center;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+
+    div {
+      margin-top: 1em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: dense;
+      gap: 1em;
+      h5 {
+        text-align: end;
+      }
+    }
+  }
+
+  .favorite-icon{
+    background-image: $favorite-alt;
+    background-repeat: no-repeat; 
+    background-size: contain;
+    height: 1.5em;
+    width: 1.5em;
+    top: 0.5em;
+    position: absolute;
+    right: 0.5em;
+  }
+
+  .favorite {
+    background-image: $favorite;
+  }
+}

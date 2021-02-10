@@ -1,0 +1,30 @@
+<div>
+  <div class="contain-logo">
+    <img ng-src="{{ tech.logo }}" alt="{{ tech.tech }}">
+    <div 
+      class="favorite-icon"
+      ng-class="{'favorite': tech.favorite }"
+      ng-click="addFavorite()"
+    ></div>
+  </div>
+
+  <div class="contain-info">
+    <h4>{{ tech.tech }}</h4>
+    <div>
+      <h5>Año</h5>
+      <span>{{ tech.year }}</span>
+
+      <h5>Autor</h5>
+      <span>{{ tech.author }}</span>
+
+      <h5>Licencia</h5>
+      <span>{{ tech.license }}</span>
+
+      <h5>Lenguaje</h5>
+      <span>{{ tech.language }}</span>
+
+      <h5>Tipo</h5>
+      <span>{{ tech.type }}</span>
+    </div>
+  </div>
+</div>
