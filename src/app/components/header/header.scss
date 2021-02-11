@@ -50,7 +50,7 @@
         font-size: 1.15em;
       }
 
-      & a.btn-register {
+      & a.btn-register, .btn-techs {
         border: 1px solid;
         border-radius: 19px;
         padding: 11px 35px;
@@ -59,11 +59,27 @@
         font-size: 0.8em;
       }
 
-      & a.btn-register:hover {
+      & a.btn-register:hover, .btn-techs:hover {
         color: $white;
         background: $primary;
         border: 1px $primary;
       }
+    }
+
+    .contain-loggedin {
+      position: relative;
+
+      span {
+        font-weight: bold;
+        color: $primary;
+        position: absolute;
+        right: 0.8em;
+        top: 1px;
+      }
+    }
+    .contain-loggedin:hover span {
+      cursor: pointer;
+      color: $white;
     }
   }
 

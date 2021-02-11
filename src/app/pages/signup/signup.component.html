@@ -1,1 +1,205 @@
-<h1>signup</h1>
+<headerapp></headerapp>
+<div class="space-header"></div>
+
+<div class="container">
+  <h1 class="title-sigup">Registro</h1>
+
+  <form 
+    class="form"
+    name="formSignup" 
+    ng-submit="signup()"
+    novalidate
+  >
+    <div class="form-col">
+      <div>
+        <label for="name">Nombre</label>
+      </div>
+      <div>
+        <input
+          ng-model="formData.name"
+          id="name"
+          name="name"
+          type="text" 
+          ng-maxlength="30"
+          required
+        />
+        <div ng-messages="formSignup.name.$error" 
+          ng-show="formSignup.name.$touched && formSignup.name.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="maxlength">Debe contener maximo 30 caracteres</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="lastName">Apellido</label>
+      </div>
+      <div>
+        <input
+          id="lastName"
+          name="lastName"
+          ng-model="formData.lastName"
+          type="text"
+          ng-maxlength="30"
+          required/>
+
+        <div ng-messages="formSignup.lastName.$error" 
+          ng-show="formSignup.lastName.$touched && formSignup.lastName.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="maxlength">Debe contener maximo 30 caracteres</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="country">Pais</label>
+      </div>
+      <div>
+        <select
+          id="country"
+          name="country"
+          ng-model="formData.country"
+          ng-options="country.name for country in countries"
+          ng-change="changeCountry()"
+          required>
+        </select>
+
+        <div ng-messages="formSignup.country.$error" 
+          ng-show="formSignup.country.$touched && formSignup.country.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="department">Provincia</label>
+      </div>
+      <div>
+        <select 
+          id="department"
+          name="department"
+          ng-model="formData.department"
+          ng-options="department for department in departments"
+          required>
+        </select>
+
+        <div ng-messages="formSignup.department.$error" 
+          ng-show="formSignup.department.$touched && formSignup.department.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="email">Email</label>
+      </div>
+      <div>
+        <input 
+          id="email"
+          name="email"
+          ng-model="formData.email"
+          type="email"
+          required
+        />
+
+        <div ng-messages="formSignup.email.$error" 
+          ng-show="formSignup.email.$touched && formSignup.email.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="email">Correo no valido</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="phone">Telefono</label>
+      </div>
+      <div>
+        <input 
+          id="phone"
+          name="phone"
+          ng-model="formData.phone"
+          type="number"
+          maxlength="10"
+          required
+        />
+
+        <div ng-messages="formSignup.phone.$error" 
+          ng-show="formSignup.phone.$touched && formSignup.phone.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="maxlength">Debe contener maximo 10 numeros</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="password">Contraseña</label>
+      </div>
+      <div>
+        <input 
+          id="password"
+          name="password"
+          ng-model="formData.password"
+          type="password"
+          minlength="6"
+          required
+        />
+        <div ng-messages="formSignup.password.$error" 
+          ng-show="formSignup.password.$touched && formSignup.password.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="minlength">Debe contener minimo 6 caracteres</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-col">
+      <div>
+        <label for="passwordConfirm">Confirmar contraseña</label>
+      </div>
+      <div>
+        <input 
+          id="passwordConfirm"
+          name="passwordConfirm"
+          ng-model="formData.passwordConfirm"
+          type="password"
+          minlength="6"
+          ng-pattern="formData.password"
+          required
+        />
+        <div ng-messages="formSignup.passwordConfirm.$error" 
+          ng-show="formSignup.passwordConfirm.$touched && formSignup.passwordConfirm.$invalid">
+          <span ng-message="required">El campo es requerido</span>
+          <span ng-message="minlength">Debe contener minimo 6 caracteres</span>
+          <span ng-message="pattern">Las contraseñas deben coincidir</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="terms-check">
+      <input
+        ng-model="formData.terms"
+        id="check"
+        name="terms"
+        type="checkbox"
+        required
+      />
+      <label for="check"
+        >Acepto
+        <a href="#!/terms">Términos y Condiciones</a>
+      </label>
+    </div>
+
+    <div class="signup-container">
+      <button 
+        type="submit"
+        class="btn-signup"
+        ng-disabled="formSignup.$invalid"
+        >Registrarse</button>
+    </div>
+  </form>
+</div>

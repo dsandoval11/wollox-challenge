@@ -20,6 +20,13 @@
             href="#!/sigup"
             ng-hide="loggedin"
           >Resgistrarse</a>
+          
+          <div 
+            class="contain-loggedin"
+            ng-show="loggedin">
+            <a class="btn-techs" href="#!/list">Lista Tecnologias</a>
+            <span class="primary-color">{{countFavorites ? countFavorites : ''}}</span>
+          </div>
         </li>
       </ul>
   </div>

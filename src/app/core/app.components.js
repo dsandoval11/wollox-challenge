@@ -59,7 +59,11 @@ const components = [
     bindings: {
       tech: '<'
     }
-  }
+  },
+  {
+    name: 'terms',
+    template: require('../pages/terms/terms.component.html'),
+  },
 ];
 
 angular.module('challenge.components', []);

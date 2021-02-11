@@ -45,4 +45,10 @@ export default ['$localStorage', '$rootScope',
       }, 0);
       $rootScope.$emit('countFavorites', count);
     };
+
+    this.login = (token) => {
+      $localStorage.token = token;
+      $rootScope.$emit('loggedin', token);
+      $rootScope.$emit('authorized', false, '/list');
+    };
   }];

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --config webpack.dev.js"
+    "serve": "webpack serve --config webpack.dev.js",
+    "build": "webpack --progress --mode production"
   },
   "author": "David Sandoval",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.8.2",
+    "angular-messages": "^1.8.2",
     "angular-route": "^1.8.2",
     "ngstorage": "^0.3.11"
   },
